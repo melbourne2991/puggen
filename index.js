@@ -15,7 +15,8 @@ module.exports = function PugGenerator(options) {
     const outputFilePath = path.join(options.outputDir, `${_path}.html`);
 
     fs.outputFileSync(outputFilePath, output);
-    return path;
+
+    return _path;
   }
 
   function compileTemplates(src) {
