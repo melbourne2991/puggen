@@ -21,9 +21,12 @@ module.exports = function PugGenerator(options) {
 
   function compileTemplates(src) {
     const compiled = {};
+    const pattern = options.pattern || `**/*.pug`;
+    const ignore = options.ignore || [];
 
-    glob.sync(`**/*.pug`, {
-      cwd: src
+    glob.sync(pattern, {
+      cwd: src,
+      ignore
     }).forEach((file) => {
       const key = file.split('.pug')[0];
 
