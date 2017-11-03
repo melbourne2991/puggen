@@ -1,6 +1,6 @@
 {
   "name": "@melb2991/puggen",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Simple helper for generating static files with pug",
   "main": "index.js",
   "scripts": {
